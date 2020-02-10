@@ -1,0 +1,27 @@
+.placeholder {
+    padding: 0.4em 0.2em;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    border-top: 1px solid #e4e4e4;
+    &:first-child{
+      border-top: 0;
+    }
+    .menu-options{
+        display: none;
+    }
+    &:hover{
+        background-color: #e5e5e5;
+        .menu-options{
+            display: block;
+        }
+    }
+	.profile-img {
+		width: 3.5em;
+        height: 3.5em;
+        margin-left: 0.3em;
+		background-color: #a5a5a5;
+    }
+    .contact-field{
+        font-size: 0.8em;
+    }
+}
