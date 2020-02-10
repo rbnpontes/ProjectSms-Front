@@ -1,0 +1,46 @@
+.home{
+    @import '../variables.scss';
+    .home-logo{
+        background-image: url('../imgs/logo__pitang.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 1.2em;
+        height: 2.7em;
+    }
+    .home-box{
+        background-color: #fff;
+        min-width: 20em;
+        border-top: 0.5em solid $red;
+        padding: 0.6em 0.6em;
+        box-shadow: 0 5px 9px -5px rgba(0, 0, 0, 0.48);
+
+        .title{
+            font-weight: bold;
+            color: #FFC801;
+            text-transform: uppercase;
+            font-size: 1.3em;
+            margin-top: 0.5em;
+            .back-ic{
+                color: $textColor;
+                cursor: pointer;
+                &:hover{
+                    color: #696969;
+                }
+            }
+        }
+        .form-fields{
+            & > .form-group{
+                margin-bottom: 0.1em;
+                & > label{
+                    margin-bottom: 0;
+                }
+                & > .form-control{
+                    border-radius: 0;
+                }
+            }
+        }
+        @import './Home/Login.scss';
+        @import './Home/Register.scss';
+    }
+}

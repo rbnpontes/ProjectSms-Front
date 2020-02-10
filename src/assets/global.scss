@@ -1,0 +1,47 @@
+@import '~bootstrap/scss/bootstrap-grid.scss';
+@import '~bootstrap/scss/bootstrap-reboot.scss';
+@import '~bootstrap/scss/_type.scss';
+@import '~bootstrap/scss/_utilities.scss';
+@import '~bootstrap/scss/_forms.scss';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import './variables.scss';
+
+.app{
+    color: $textColor;
+    background-image: url('./imgs/bg.svg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button:focus{
+    // Remove Blue Outline from Buttons
+    outline: none;
+}
+.btn-success, .btn-outline{
+    border: 0;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.btn-success{
+    background-color: $green;
+    color: #fff;
+    &:hover{
+        background-color: #2c6517;
+    }
+}
+.btn-outline{
+    background-color: #fff;
+    border: 0.1em solid $textColor;
+    color: #656565;
+    &:hover{
+        border: 0.1em solid #656565;
+    }
+}
