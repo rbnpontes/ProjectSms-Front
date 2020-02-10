@@ -3,6 +3,7 @@ import '../assets/pages/Main.scss';
 import { MainLeftNav, MainRightNav } from './Main/NavHeaders';
 import Search from './Main/Search';
 import { PlaceholderMessage } from '../components/PlaceholderContact';
+import MessageContainer from './Messages/MessageContainer';
 export default class Main extends React.Component {
     private get messages() {
         let arr = new Array(10);
@@ -32,6 +33,7 @@ export default class Main extends React.Component {
                             </div>
                         </div>
                         <div className="col px-0">
+                            <MessageContainer/>
                         </div>
                     </div>
                 </section>

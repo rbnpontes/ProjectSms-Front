@@ -1,0 +1,27 @@
+.message-container {
+	.message-input {
+		padding: 0.5em 0.7em;
+        background-color: #e5e5e5;
+        .msg-input{
+            border-radius: 2em;
+            padding: 0.3em 1em;
+            border: 0;
+            background-color: rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            &:focus{
+                background-color: #fff;
+                outline: none;
+            }
+        }
+		.send-btn {
+			border-radius: 2em;
+			border: 0;
+			width: 2.5em;
+            height: 2.5em;
+            background-color: #CECECE;
+            &:hover{
+                background-color: #fbfbfb;
+            }
+		}
+	}
+}
