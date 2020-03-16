@@ -1,6 +1,4 @@
 let _authService : any = null;
-let _auth = true;
-
 export default class AuthService{
     public static get instance() : AuthService{
         if(_authService == null)
@@ -8,7 +6,9 @@ export default class AuthService{
         return _authService;
     }
     public get authenticated(){
-        return _auth;
+        return Boolean(localStorage.getItem('auth'));
     }
-    
+    public set authenticated(value : boolean){
+        localStorage.setItem('auth', value ? '1' : '');
+    }
 }

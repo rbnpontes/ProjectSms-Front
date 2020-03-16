@@ -1,5 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import { threadId } from 'worker_threads';
+import AuthService from '../../services/AuthService';
 function SignUpField() {
     let [redirect, setRedirect] = React.useState(false);
     return (
@@ -10,13 +12,18 @@ function SignUpField() {
     );
 }
 export default class Login extends React.Component {
+    private tryLogin(){
+        AuthService.instance.authenticated = true;
+        // Refresh Page
+        window.location.reload();
+    }
     public render() {
         return (
             <div className="login-field">
                 <div className="title">
                     Sign In
                 </div>
-                <form>
+                <form onSubmit={(e)=> {e.preventDefault();this.tryLogin()}}>
                     <div className="pt-2 form-fields">
                         <div className="form-group">
                             <small><label htmlFor="username-field">Username: </label></small>

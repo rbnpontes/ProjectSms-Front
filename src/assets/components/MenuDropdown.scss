@@ -1,0 +1,16 @@
+.menu-dropdown{
+    position: absolute;
+    padding-left: 0;
+    margin-bottom: 0;
+    background-color: #fff;
+    z-index: 1;
+    box-shadow: 0 1px 4px -1px #000;
+    top: 2em;
+    min-width: 9em;
+    & > .menu-item{
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.226);
+        }
+    }
+}

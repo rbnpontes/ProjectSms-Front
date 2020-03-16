@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AuthService from '../../services/AuthService';
 export default class Register extends React.Component {
+    private tryRegister(){
+        AuthService.instance.authenticated = true;
+        window.location.reload();
+    }
     public render() {
         return (
             <div className="register-field">
@@ -14,7 +19,7 @@ export default class Register extends React.Component {
                         Sign Up
                     </div>
                 </div>
-                <form>
+                <form onSubmit={(e)=> {e.preventDefault(); this.tryRegister();}}>
                     <div className="pt-2 form-fields">
                         <div className="form-group">
                             <small><label>Name:</label></small>
