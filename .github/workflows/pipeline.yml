@@ -20,16 +20,14 @@ jobs:
       with:
         node-version: '10.14'
 
-    - name: npm install, build, and test
-      run: |
-        npm install
-        npm run build --if-present
-        npm run test --if-present
-
+    - name: Updating Depedencies
+      run: npm install
+    - name: Building Application
+      run: npm run build
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
       with:
         app-name: 'sms-pitang'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_cacc0ab86eb845c3a7127a3898b497a6 }}
-        package: .
+        package: './build'
