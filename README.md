@@ -1,5 +1,4 @@
-## Available Scripts
-In the project directory, you can run:
+[![Coverage Status](https://coveralls.io/repos/github/rbnpontes/ProjectSms-Front/badge.svg?branch=master)](https://coveralls.io/github/rbnpontes/ProjectSms-Front?branch=master)
 
 ### `npm start`
 
